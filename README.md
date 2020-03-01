@@ -1,2 +1,2 @@
-# hibernate-beginners-mysqldb
-hibernate-beginners-mysqldb
+# hibernate-beginners
+Hibernate Beginners (Introduction)

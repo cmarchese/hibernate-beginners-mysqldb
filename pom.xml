@@ -1,0 +1,150 @@
+<!--
+   - Name: pom.xml
+   - Description: Maven setup file.
+   - Author: Raul Peña (raul.pena@gmail.com)
+   -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+
+
+    <!--
+       - POM setup.
+       -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.research24x7.java</groupId>
+    <artifactId>hibernate-beginners</artifactId>
+    <name>hibernate-beginners</name>
+    <version>1.0.0</version>
+    <description>Learning Hibernate (Beginners).</description>
+
+    <developers>
+        <developer>
+            <id>raul.g.pena</id>
+            <name>Raul Peña</name>
+            <email>raul.pena@gmail.com</email>
+      </developer>
+    </developers>
+
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>8</java.version>
+    </properties>
+
+
+
+    <!--
+       - Dependencies declarations.
+       -->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
+        </dependency>
+        <!--
+           - Test dependencies.
+           -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
+        <!--
+           - Compile dependencies.
+           -->
+
+        <!-- 
+           - slf4j dependencies.
+           -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--
+           - Apache dependencies.
+           -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--
+           - Hibernate dependencies.
+           -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.3.11.Final</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.10</version>
+        </dependency>
+
+        <!--
+           - Another projects.
+          -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>0.15</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+
+
+
+    <!--
+       - Build setup.
+       -->
+    <build>
+        <finalName>hibernate-beginners</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    
+
+</project>
